@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Work Sans';
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior:smooth;
+}
+
+.nav {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  font-size: 20px;
+  top:0;
+  left:0; 
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10vh;
+  background-color: #0b0d0d;
+  opacity: .95;
+  z-index: 100;
+}
+.nav a{
+  color: #fff;
+  transition: .5s;
+}
+
+.redes{
+  margin-top: 20px;
+}
+.redes a{
+  font-size: 40px;
+  color: #fff;
+  margin: 15px;
+  transition: 0.3s;
+}
+.redes a:hover{
+  transition: 0.3s;
+  font-size: 60px;
+}
+
+.nav ul {
+  display:flex;
+  list-style: none;
+  width: 50vw;
+  font-size: 25px;
+}
+
+.logo a {
+  margin-left: 10vw;
+  font-size: 40px;
+  text-decoration: none;
+  color:#1CB698;
+}
+
+.nav li{
+  margin:15px;
+}
+
+.nav a{
+  text-decoration: none;
+}
+
+.nav a:hover{
+  color: #1CB698;
+}
+
+
+.presentation{
+  background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), url("https://github.com/codigowebmp/portfolio-nick/blob/main/img/fondo.jpg?raw=true");
+  margin-top: 10vh;
+  height: 90vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: #1e2326;
+  height: 75vh;
+  width: 30vw;
+  margin: 10vh;
+  border-radius: 30px;
+  flex-direction: column;
+  padding: 35px;
+  color: #fff;
+  margin: auto;
+  text-align: center;
+}
+
+.image img{
+  display: block;
+  width: 70%;
+  border-radius: 100%;
+  border: 10px solid #1CB698;
+  margin: auto;
+  transition: .3s;
+}
+
+.image img:hover{
+  box-shadow: 8px 4px 10px #137864;
+  transition: .3s;
+}
+
+.presentation h1 {
+  margin-top: 50px;
+  font-family: 'Righteous';
+}
+.presentation h3 {
+  margin-top: 3px;
+  font-size: 25px;
+  font-weight: normal;
+}
+.presentation p {
+  margin-top: 70px;
+}
+
+.curriculum {
+  background-color: #1e2326;
+  color: #fff;
+  text-align: center;
+}
+
+.curriculum h2{
+  font-size: 70px;
+  padding-top: 90px;
+  font-family: 'Righteous';
+  margin-bottom: 25px;
+}
+
+.curriculum-content {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+}
+
+.education, .experience {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.education{
+  border-right: 7px solid #252A2E;
+}
+.experience{
+  border-left: 7px solid #252A2E;
+}
+
+.education h3, .experience h3{
+  font-size: 40px;
+}
+
+.item {
+  display:flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px;
+  background-color: #252A2E;
+  padding: 20px;
+  width: 30vw;
+  position: relative;
+  transition: .5s;
+  text-align: start;
+}
+
+.item:hover{
+  box-shadow: 2px 2px 10px #1CB698;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.i{
+  border-right: 4px solid #1CB698;
+}
+.d{
+  border-left: 4px solid #1CB698;
+}
+
+.item h4 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.item span:nth-child(2){
+  font-size: 30px;
+  color: #1CB698;
+  font-family: 'Righteous';
+  text-align: start;
+}
+.item span:nth-child(3){
+  font-size: 20px;
+  color: #1CB698;
+  margin-bottom: 15px;
+}
+
+.conectori {
+  height: 2px;
+  background-color: #1CB698;
+  width: 70px;
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  z-index: 5;
+}
+.circuloi {
+  display: block;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: #1CB698;
+  float: right;
+  position: relative;
+  bottom: 6px;
+}
+
+.conectord {
+  height: 2px;
+  background-color: #1CB698;
+  width: 70px;
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  z-index: 5;
+}
+.circulod {
+  display: block;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: #1CB698;
+  float: left;
+  position: relative;
+  bottom: 6px;
+}
+
+.curriculum button {
+  height: 4vh;
+  margin: 20px;
+  min-width: 15vw;
+  font-size: 25px;
+  font-family: 'Work Sans';
+  color: #FFF;
+  background-color: #1e2326;
+  border: 2px solid #FFF;
+  padding: 3px;
+  position: relative;
+  z-index: 10;
+  transition: .3s;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #117662;
+  z-index: -1;
+  transition: 1s;
+}
+.curriculum button:hover .overlay{
+  width: 100%;
+}
+.curriculum button:hover{
+  font-size: 35px;
+  height: 6vh;
+  cursor: pointer;
+  transition: .3s;
+}
+
+
+
+.content {
+  border: 2px solid red;
+}
+
