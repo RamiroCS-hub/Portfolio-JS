@@ -283,6 +283,7 @@ html {
   align-content: flex-start;
   text-align: center;
   flex-wrap: wrap;
+  height: 70vh;
 }
 
 .projects h2 {
