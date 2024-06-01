@@ -56,6 +56,7 @@ html {
   font-size: 40px;
   text-decoration: none;
   color:#1CB698;
+  font-weight: 600;
 }
 
 .nav li{
@@ -274,9 +275,183 @@ html {
   transition: .3s;
 }
 
+.projects {
+  background-color: #252A2E;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  text-align: center;
+  flex-wrap: wrap;
+}
 
+.projects h2 {
+  margin: 40px;
+  margin-top: 70px;
+  font-size: 50px;
+  width: 100vw;
+}
 
-.content {
-  border: 2px solid red;
+.project{
+  width: 25vw;
+  height: 30vh;
+  margin: 10px;
+  object-fit: fill;
+  transition: .3s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .3s ease-in;
+  transform: scale(1);
+}
+
+.itemOver{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  z-index:1;
+  top: 0;
+  bottom: 0;
+  padding: 30px;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: "europa";
+  align-content: center;
+}
+
+.project:hover .itemOver{
+  opacity: 1;
+  background-color: #1e2326;
+  transition: .4s ease-in-out;;
+  cursor: pointer;
+}
+
+.project:hover img{
+  transform: scale(1.1);
+}
+
+.contact{
+  margin:0;
+  padding-top: 90px;
+  background-image: url(./img/contact_bg.png);
+  width: 100%;
+  background-color: #1e2326;
+  background-size: cover;
+  text-align: center;
+  color: #FFF;
+}
+.contact h3 {
+  font-size: 50px;
+}
+
+.contact .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+}
+
+.contact .form .itemF{
+  margin: 10px;
+  height: 10vh;
+  width: 50vw;
+  font-size: 30px;
+}
+
+.contact .form .itemF input{
+  height: 50%;
+  width:100%;
+  margin: 10px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+
+.contact .form .itemF input:focus{
+  outline: none;
+  box-shadow: 2px 2px 10px #1CB698;
+}
+
+.contact .form button{
+  margin: 20px;
+  margin-top: 40px;
+  width: 15vw;
+  height: 7vh;
+  border: 2px solid #FFF;
+  color: #FFF;
+  background-color: #1E2326;
+  transition: .5s ease-in-out;
+  font-size: 25px;
+  border-radius: 30px;
+}
+
+.contact .form button:hover {
+  transition: .5s ease-in-out;
+  background-color: #148a72;
+  transform: scale(1.06);
+  cursor: pointer;
+}
+
+.footer{
+  background-color: #252A2E;
+  margin: 0;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction:column;
+  color: #FFF;
+  position: relative;
+}
+
+.footer .redesF {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20vw;
+  font-size: 40px;
+  margin: 20px;
+  margin-bottom: 40px;
+}
+.footer .redesF a{
+  color: #FFF;
+  transition: .5s;
+}
+
+.footer .redesF a:hover{
+  transform: scale(1.4);
+  transition: .5s;
+}
+
+.footer span{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer .arriba{
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #1CB698;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -25px;
+  border-radius: 50%;
+  line-height: 50px;
+  font-size: 18px;
 }
 
