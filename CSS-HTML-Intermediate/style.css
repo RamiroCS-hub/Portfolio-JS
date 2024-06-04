@@ -487,12 +487,7 @@ html {
   border-radius: 50%;
   line-height: 50px;
   font-size: 18px;
-}
-@media(min-width: 800px) {
-  .nav{
-    display: flex;
-  }
-}
+} 
 @media(max-width: 800px){
   .nav{
     display: none;
@@ -533,7 +528,6 @@ html {
     background-color: #1F2427;
     z-index: 100;
     opacity: .95;
-    gap: 20px;
     flex-wrap: wrap;
   }
 
@@ -557,10 +551,15 @@ html {
   .nav_responsive ul {
     order: 2;
     display:block;
-    width: 100%;
     list-style: none;
     font-size: 2rem;
     text-align: center;
+    width: 100vw;
+  }
+  .nav_responsive li {
+    margin-top: 25px;
+    border-bottom: 4px solid #343b41;
+    width: 100%;
   }
   .nav_responsive svg {
     margin-top: 20px;
