@@ -11,12 +11,17 @@ html {
   scroll-snap-type: y proximity;
 }
 
+.menu {
+  display: none;
+}
+.nav_responsive{
+  display: none;
+}
 .nav {
+  display: flex;
   scroll-snap-align:start;
   position: fixed;
-  display: flex;
   width: 100vw;
-  min-width: 500px;
   font-size: 20px;
   top:0;
   left:0; 
@@ -33,6 +38,33 @@ html {
   transition: .5s;
 }
 
+.nav ul {
+  display:flex;
+  list-style: none;
+  font-size: 25px;
+}
+
+.logo a {
+  margin: 5vw;
+  font-size: 40px;
+  text-decoration: none;
+  color:#1CB698;
+  font-weight: 600;
+}
+
+.nav li{
+  margin-right:25px;
+}
+
+.nav a{
+  text-decoration: none;
+}
+
+.nav a:hover{
+  color: #1CB698;
+}
+
+
 .redes{
   margin-top: 20px;
 }
@@ -48,39 +80,11 @@ html {
   fill:#1CB698;
 }
 
-.nav ul {
-  display:flex;
-  list-style: none;
-  width: 50vw;
-  font-size: 25px;
-}
-
-.logo a {
-  margin-left: 10vw;
-  font-size: 40px;
-  text-decoration: none;
-  color:#1CB698;
-  font-weight: 600;
-}
-
-.nav li{
-  margin:15px;
-}
-
-.nav a{
-  text-decoration: none;
-}
-
-.nav a:hover{
-  color: #1CB698;
-}
-
-
 .presentation{
   background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), url("https://github.com/codigowebmp/portfolio-nick/blob/main/img/fondo.jpg?raw=true");
   margin-top: 10vh;
   height: 100vh;
-  background-size: cover;
+  background-size:cover;
   display: flex;
   justify-content: center;
 }
@@ -134,7 +138,7 @@ html {
 
 .curriculum h2{
   scroll-snap-align: start;
-  font-size: 70px;
+  font-size: 3.5rem;
   padding-top: 10vh;
   font-family: 'Righteous';
   margin-bottom: 25px;
@@ -246,22 +250,6 @@ html {
   float: left;
   position: relative;
   bottom: 6px;
-}
-
-@media(max-width: 800px){
-  html {
-    scroll-snap-type: none;
-  }
-  .conectord, .conectori, .circulod, .circuloi {
-    display: none;
-  }
-  .education, .experience{
-    border: none;
-  }
-  .curriculum-content{
-    display: grid;
-    grid-template-columns: 1fr;
-  }
 }
 
 .curriculum button {
@@ -500,4 +488,101 @@ html {
   line-height: 50px;
   font-size: 18px;
 }
+@media(min-width: 800px) {
+  .nav{
+    display: flex;
+  }
+}
+@media(max-width: 800px){
+  .nav{
+    display: none;
+  }
+  html {
+    scroll-snap-type: none;
+  }
+  .menu{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: #0b0d0d;
+    z-index: 100;
+    opacity: .95;
+    height: 7vh;
+    padding-left: 15px;
+    padding-right: 20px;
+    padding-top: 5px;
+    justify-content: space-between;
+  }
+  .menu svg {
+    height: 100%;
+    fill: #FFF;
+  }
+  .nav_responsive{
+    position: fixed;
+    display: none;
+    width: 100vw;
+    font-size: 3rem;
+    top:0;
+    left:0; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    background-color: #1F2427;
+    z-index: 100;
+    opacity: .95;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 
+  .logo {
+    display: inline;
+    text-align: center;
+  }
+
+  .logo a {
+    margin: 0;
+    font-size: 3rem;
+    text-decoration: none;
+    color:#1CB698;
+    font-weight: 600;
+  }
+
+  .nav_responsive a{
+    color: #FFF;
+    text-decoration: none;
+  }
+  .nav_responsive ul {
+    order: 2;
+    display:block;
+    width: 100%;
+    list-style: none;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .nav_responsive svg {
+    margin-top: 20px;
+    order: 0;
+    display: block;
+    height: 70px;
+    fill: #FFF;
+  }
+  .presentation{
+    margin-top: 7vh;
+  }
+
+  .conectord, .conectori, .circulod, .circuloi {
+    display: none;
+  }
+  .education, .experience{
+    border: none;
+    margin-left: -20px;
+  }
+  .curriculum-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+}
