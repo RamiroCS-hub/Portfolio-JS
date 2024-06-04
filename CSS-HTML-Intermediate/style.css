@@ -577,7 +577,7 @@ html {
   }
   .education, .experience{
     border: none;
-    margin-left: -20px;
+    margin: 0;
   }
   .curriculum-content{
     display: grid;
