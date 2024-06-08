@@ -1,0 +1,35 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40vw;
+  justify-content: center;
+}
+
+.square {
+  width: 30%;
+  height: 150px;
+  border: 3px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.turns{
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+.actualTurn{
+  background-color: rgb(9, 101, 101);
+}
+.turns h2{
+  font-size: 40px;
+  display: block;
+  width:50px;
+}
