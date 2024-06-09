@@ -1,6 +1,13 @@
+import { useState } from 'react'
 import './twitterCard.css'
 
-export const TwitterCard = ({userName, name, isFollowing}) => {
+// eslint-disable-next-line react/prop-types
+export const TwitterCard = ({userName = 'unknown', name}) => {
+  
+  const [isFollowing, setIsFollowing] = useState(false)
+  const text = isFollowing ? 'Following' : 'Follow'
+  const buttonClassName = isFollowing ? 'tw-followCard-button is-following' : 'tw-followCard-button'
+  const handleButton = () => { setIsFollowing(!isFollowing) }
   return (
     <div className='tw-followCard'>
     <div className='tw-followCard-header'>
@@ -13,7 +20,10 @@ export const TwitterCard = ({userName, name, isFollowing}) => {
         <span>@{userName}</span>
       </div>
     </div>
-      <button>Seguir</button>
+      <button className={buttonClassName} onClick={handleButton}>
+        <span className='tw-followCard-follow'>{text}</span>
+        <span className='tw-followCard-unfollow'>Unfollow</span>
+      </button>
     </div>
   )
 }
