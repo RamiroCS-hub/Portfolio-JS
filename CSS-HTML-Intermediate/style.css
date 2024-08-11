@@ -353,7 +353,7 @@ html {
 .project:hover .itemOver{
   opacity: 1;
   background-color: #1e2326;
-  transition: .4s ease-in-out;;
+  transition: .2s ease-in-out;;
   cursor: pointer;
 }
 
